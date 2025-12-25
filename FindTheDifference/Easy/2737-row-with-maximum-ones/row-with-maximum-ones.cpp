@@ -1,7 +1,6 @@
 class Solution {
 public:
     vector<int> rowAndMaximumOnes(vector<vector<int>>& mat) {
-        vector<int> result;
         int maxcount=0;
         int count=0;
         int index=0;
