@@ -7,7 +7,7 @@ public:
         for(char c:s1){
             freq[c-'a']++;
         }
-        for(int i=0;i < s2.size();i++){
+        for(int i=0;i+s1.size() <= s2.size();i++){
             string a = s2.substr(i,s1.size());
              vector<int> freq1(26,0);
             for(char c:a)
