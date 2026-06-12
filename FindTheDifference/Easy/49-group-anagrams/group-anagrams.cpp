@@ -6,11 +6,11 @@ public:
         for (string s: strs) {
             string k= s;
             sort(k.begin(),k.end());
-            
+
             m[k].push_back(s);
         }
         for (auto &i: m) {
-            ans.push_back(i.second);
+            ans.push_back(i.second);// respective anagram pe uska strings honge key-anagram, strings saare second(value)
         }
         return ans;
     }
