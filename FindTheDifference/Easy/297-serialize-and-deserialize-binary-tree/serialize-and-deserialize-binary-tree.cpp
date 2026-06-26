@@ -10,7 +10,7 @@
 class Codec {
 public:
 
-    // Encodes a tree to a single string.
+    //Encodes a tree to a single string.
     string serialize(TreeNode* root) {
         string s;
     serializeHelper(root, s);
@@ -26,7 +26,7 @@ public:
     serializeHelper(root->right, s);
 }
 
-    // Decodes your encoded data to tree.
+    //Decodes your encoded data to tree.
     TreeNode* deserialize(string data) {
         stringstream ss(data);
     return deserializeHelper(ss);
@@ -43,7 +43,3 @@ public:
     return node;
 }
 };
-
-// Your Codec object will be instantiated and called as such:
-// Codec ser, deser;
-// TreeNode* ans = deser.deserialize(ser.serialize(root));
