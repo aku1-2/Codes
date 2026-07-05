@@ -27,3 +27,47 @@ public:
         return sum;
     }
 };
+
+/*
+class Solution {
+public:
+    string intToRoman(int num) {
+        string roman;
+        while (num > 0) {
+            if (num >= 1000) {
+                roman += 'M';
+                num -= 1000;
+            } else if ((num / 100) % 5 == 4){
+                roman += 'C';
+                num += 100;
+            } else if (num >= 500) {
+                roman += 'D';
+                num -= 500;
+            } else if (num >= 100) {
+                roman += 'C';
+                num -= 100;
+            } else if ((num / 10) % 5 == 4){
+                roman += 'X';
+                num += 10;
+            } else if (num >= 50) {
+                roman += 'L';
+                num -= 50;
+            } else if (num >= 10) {
+                roman += 'X';
+                num -= 10;
+            } else if (num % 5 == 4){
+                roman += 'I';
+                num++;
+            } else if (num >= 5) {
+                roman += 'V';
+                num -= 5;
+            } else if (num >= 1) {
+                roman += 'I';
+                num--;
+            }
+        }
+        
+        return roman;
+    }
+};
+*/
