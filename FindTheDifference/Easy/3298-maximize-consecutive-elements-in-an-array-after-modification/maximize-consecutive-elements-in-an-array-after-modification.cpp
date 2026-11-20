@@ -1,4 +1,4 @@
-class Solution {
+/*class Solution {
 public:
 vector<vector<int>>memo;
 int findVal(vector<int>& nums, int start,int target){
@@ -33,5 +33,24 @@ int helper(int i,int increment,vector<int>& nums ){
         }
         return ans;
 
+    }
+};*/
+
+class Solution {
+public:
+    int maxSelectedElements(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+
+        unordered_map<int, int> dp;
+        int ans = 0;
+
+        for (int x : nums) {
+            dp[x + 1] = dp[x] + 1;
+            dp[x] = dp[x - 1] + 1;
+
+            ans = max({ans, dp[x], dp[x + 1]});
+        }
+
+        return ans;
     }
 };
