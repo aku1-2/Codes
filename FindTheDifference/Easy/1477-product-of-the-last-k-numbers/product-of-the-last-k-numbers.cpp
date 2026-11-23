@@ -8,17 +8,31 @@ int n;
     }
     
     void add(int num) {
-        v.push_back(num);
-        
+        if(num==0){
+            v={};
+            n=0;
+        }else{ 
+        if(v.empty())
+             v.push_back(num);
+        else{
+            v.push_back(v[n-1]*num);
+        }
+        n++;
+        }
     }
     
     int getProduct(int k) {
-        int prod=1;
+        /*int prod=1;
         int n=v.size();
         for(int i=n-k;i<n;i++){
             prod *=v[i];
         }
-        return prod;
+        return prod;*/
+        if(k>n) return 0;
+        else if(k==n) return v[n-1];
+        else{
+            return v[n-1]/v[n-k-1];
+        }
         
     }
 };
