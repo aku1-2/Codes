@@ -11,7 +11,7 @@ public:
             for(int j=i;j<n;j++){
                   g=gcd(g,nums[j]);
                   l=lcm(l,nums[j]);
-                  if(prod>=2520*g*l)
+                  if(prod>=2520*g*l)//comments se hai
                   break;
                   prod*=nums[j];
                   if(prod== l*g){
